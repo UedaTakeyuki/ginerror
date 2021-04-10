@@ -3,7 +3,7 @@ package ginerror
 import (
 	"errors"
 	"github.com/gin-gonic/gin"
-	"net/http"
+//	"net/http"
 )
 
 func okngErrorOutWithMessage(c *gin.Context, message string) {
