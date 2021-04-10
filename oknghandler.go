@@ -6,7 +6,7 @@ import (
 //	"net/http"
 )
 
-func okngErrorOutWithMessage(c *gin.Context, message string) {
+func OkNgErrorOutWithMessage(c *gin.Context, message string) {
 	c.JSON(500, gin.H{
 		"message": errors.New(message),
 	})
@@ -14,7 +14,7 @@ func okngErrorOutWithMessage(c *gin.Context, message string) {
 	return
 }
 
-func okngErrorOut(c *gin.Context, err error) {
+func OkNgErrorOut(c *gin.Context, err error) {
 	c.JSON(500, gin.H{
 		"message": err,
 	})
@@ -22,12 +22,12 @@ func okngErrorOut(c *gin.Context, err error) {
 	return
 }
 
-func okngNotOwnerReturn() (err error) {
+func OkNgNotOwnerReturn() (err error) {
 	err = errors.New("not owner")
 	return
 }
 
-func okngNotOwnerErrOut(c *gin.Context) {
+func OkNgNotOwnerErrOut(c *gin.Context) {
 	c.JSON(500, gin.H{
 		"message": "not owner",
 	})
